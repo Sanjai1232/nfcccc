@@ -91,3 +91,31 @@ body {
     box-shadow: 0px 3px 8px rgba(255, 126, 95, 0.6);
 }
 
+/* General Button Styling */
+#scanButton {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.5);
+}
+
+/* Hover Effect */
+#scanButton:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.7);
+}
+
+/* Active Click Effect */
+#scanButton:active {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 8px rgba(255, 126, 95, 0.6);
+}
+
+
