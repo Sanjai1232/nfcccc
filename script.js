@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            // Hide the button permanently
+            // Hide the button permanently as soon as scanning starts
             scanButton.style.display = "none";
             
             const reader = new NDEFReader();
@@ -34,14 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             };
             
-            // Once the scan is successful, keep the button hidden permanently
-            reader.onreadingerror = () => {
-                scanButton.style.display = "block"; // Show button again if scan fails
-            };
+            // Removed onreadingerror handler that re-showed the button
 
         } catch (error) {
             console.log("NFC Scan Error:", error);
-            scanButton.style.display = "block"; // Show button again if scan fails
+            // Removed code that re-showed the button
         }
     }
 
