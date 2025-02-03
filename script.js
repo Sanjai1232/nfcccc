@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.getElementById("slider");
     const bikeImage = document.getElementById("bikeImage");
 
-    // Function to start NFC scan
     async function scanNFC() {
         if (!("NDEFReader" in window)) {
             alert("NFC not supported on this device.");
@@ -13,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
+            // Hide the button after clicking
+            scanButton.style.display = "none";
+            
             const reader = new NDEFReader();
             await reader.scan();
             bikeDetails.textContent = "Scanning NFC...";
@@ -33,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         } catch (error) {
             console.log("NFC Scan Error:", error);
+            scanButton.style.display = "block"; // Show button again if scan fails
         }
     }
 
-    // Add event listener to start scan when the button is clicked
     scanButton.addEventListener("click", scanNFC);
 });
