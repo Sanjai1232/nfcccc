@@ -1,8 +1,9 @@
-/* General Page Styling */
+/* 🌟 General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #FF7E5F, #FEB47B);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,86 +11,107 @@ body {
     margin: 0;
 }
 
-/* Main Container */
+/* 🌟 Main Container */
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 500px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Scan Button */
+/* 🌟 Title Styling */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌟 Scan Button */
 #scanButton {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
     color: white;
     border: none;
-    padding: 14px 24px;
+    padding: 12px 20px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 201, 255, 0.5);
 }
 
 /* Hover Effect */
 #scanButton:hover {
-    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    background: linear-gradient(135deg, #92FE9D, #00C9FF);
     transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.7);
+    box-shadow: 0px 6px 15px rgba(0, 201, 255, 0.7);
 }
 
 /* Active Click Effect */
 #scanButton:active {
     transform: scale(1.05);
-    box-shadow: 0px 3px 8px rgba(255, 126, 95, 0.6);
+    box-shadow: 0px 3px 8px rgba(0, 201, 255, 0.6);
 }
 
-/* Bike & Owner Details */
-#details-container {
-    margin-top: 20px;
-}
-
+/* 🌟 Bike & Owner Details */
 #bikeDetails, #ownerDetails {
     font-size: 18px;
     font-weight: bold;
+    margin: 10px 0;
     padding: 12px;
-    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background: linear-gradient(135deg, #FF5E62, #FF9966);
     color: white;
     border-radius: 8px;
-    box-shadow: 0px 3px 8px rgba(0, 123, 255, 0.4);
+    box-shadow: 0px 3px 8px rgba(255, 94, 98, 0.5);
     word-wrap: break-word;
     transition: transform 0.3s ease-in-out;
-    display: none;
-}
-
-/* Show details after NFC scan */
-.show {
-    display: block !important;
 }
 
 /* Hover Effect */
 #bikeDetails:hover, #ownerDetails:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.6);
+    box-shadow: 0px 6px 12px rgba(255, 94, 98, 0.7);
 }
 
-/* Image Slider */
+/* 🌟 Image Slider */
 .slider {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-.slides img {
-    width: 100%;
-    max-height: 250px;
+.slider img {
+    max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Design */
+/* Hover Effect on Image */
+.slider img:hover {
+    transform: scale(1.1);
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌟 Responsive Design */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -104,5 +126,8 @@ body {
     #bikeDetails, #ownerDetails {
         font-size: 14px;
         padding: 8px;
+    }
+    h1 {
+        font-size: 22px;
     }
 }
