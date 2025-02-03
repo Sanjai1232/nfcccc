@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bikeDetails = document.getElementById("bikeDetails");
     const ownerDetails = document.getElementById("ownerDetails");
     const slider = document.getElementById("slider");
+    const bikeImage = document.getElementById("bikeImage");
 
     async function scanNFC() {
         if (!("NDEFReader" in window)) {
@@ -23,8 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     bikeDetails.textContent = `🚲 Bike: ${data.bikeModel}, Number: ${data.bikeNumber}`;
                     ownerDetails.textContent = `👤 Owner: ${data.ownerName}, 📞 Contact: ${data.ownerContact}`;
                     
-                    // Show the image slider
-                    slider.classList.remove("hidden");
+                    // Display bike image
+                    bikeImage.src = data.imageURL;
+                    slider.classList.remove("hidden");  // Show the image slider
                 }
             };
         } catch (error) {
