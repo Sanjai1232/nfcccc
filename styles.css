@@ -1,0 +1,108 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Scan Button */
+#scanButton {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.5);
+}
+
+/* Hover Effect */
+#scanButton:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.7);
+}
+
+/* Active Click Effect */
+#scanButton:active {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 8px rgba(255, 126, 95, 0.6);
+}
+
+/* Bike & Owner Details */
+#details-container {
+    margin-top: 20px;
+}
+
+#bikeDetails, #ownerDetails {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 123, 255, 0.4);
+    word-wrap: break-word;
+    transition: transform 0.3s ease-in-out;
+    display: none;
+}
+
+/* Show details after NFC scan */
+.show {
+    display: block !important;
+}
+
+/* Hover Effect */
+#bikeDetails:hover, #ownerDetails:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.6);
+}
+
+/* Image Slider */
+.slider {
+    display: none;
+    margin-top: 20px;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    #bikeDetails, #ownerDetails {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #bikeDetails, #ownerDetails {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

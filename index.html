@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike & Owner Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚲 Bike & Owner Info</h1>
+        
+        <!-- Scan Button -->
+        <button id="scanButton">🚀 Tap to Scan NFC</button>
+
+        <!-- Bike & Owner Details -->
+        <div id="details-container">
+            <p id="bikeDetails" class="hidden">🚲 Bike: Loading...</p>
+            <p id="ownerDetails" class="hidden">👤 Owner: Loading...</p>
+        </div>
+
+        <!-- Image Slider -->
+        <div class="slider hidden" id="slider">
+            <div class="slides">
+                <img id="bikeImage" src="" alt="Bike Image">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
