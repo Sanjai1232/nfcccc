@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            // Hide the button after clicking
+            // Hide the button permanently
             scanButton.style.display = "none";
             
             const reader = new NDEFReader();
@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     slider.classList.remove("hidden");  // Show the image slider
                 }
             };
+            
+            // Once the scan is successful, keep the button hidden permanently
+            reader.onreadingerror = () => {
+                scanButton.style.display = "block"; // Show button again if scan fails
+            };
+
         } catch (error) {
             console.log("NFC Scan Error:", error);
             scanButton.style.display = "block"; // Show button again if scan fails
